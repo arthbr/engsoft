@@ -6,15 +6,14 @@
 		
 		<input type="hidden" name="id" value="${pedido.id}" />
 		
-		
 		<label for="descricao">Descrição:</label>
-		<input id="descricao" type="text" name="descricao"/> 
+		<input id="descricao" type="text" name="descricao" value="${descricao }"/> 
 		
 		<label for="quantidade">Qntd.:</label>
-		<input id="quantidade" type="text" name="quantidade"/>
+		<input id="quantidade" type="text" name="quantidade" value="${quantidade }"/>
 		
 		<label for="valor">Valor:</label>
-		<input id="valor" type="text" name="valor"/>
+		<input id="valor" type="text" name="valor" value="${valor }"/>
 
 		<button type="submit">Adicionar itens</button>
 	</fieldset>
