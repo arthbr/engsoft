@@ -4,7 +4,7 @@
 		<tr>
 			<th>Item</th>
 			<th>Quantidade</th>
-			<th>Valor</th>
+			<th>Valor unitário</th>
 		</tr>
 	</thead>
 
