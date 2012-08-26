@@ -35,6 +35,26 @@ p,input {
 	padding-top: 10px;
 }
 
+button {
+	margin: 3px;
+	margin-left: 6px;
+	background: #444;
+	color: #FFF;
+	border: 1px #FFF solid;
+	border-bottom: 1px #000 solid;
+	float: none;
+	padding: 8px 7px;
+	text-decoration: none;
+}
+
+button:hover {
+	background: #FFF;
+	color: #F00;
+	border: #F00 1px solid;
+	border-bottom: none;
+	text-decoration: none;
+}
+
 /* #footer { */
 /* 	border-top: 1px solid gray; */
 /* 	padding-top: 10px; */

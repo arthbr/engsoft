@@ -16,10 +16,11 @@
 		<label for="valor">Valor:</label>
 		<input id="valor" type="text" name="valor"/>
 
-		<button type="submit">Enviar</button>
+		<button type="submit">Adicionar itens</button>
 	</fieldset>
 </form>
 
-<form action="lista">
-<button type="submit">Lista de Pedidos</button>
+<form action="listaItens">
+	<input type="hidden" name="id" value="${pedido.id}" />
+	<button type="submit">Lista dos itens de ${pedido.cliente}</button>
 </form>

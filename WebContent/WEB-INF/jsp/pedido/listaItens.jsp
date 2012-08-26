@@ -29,10 +29,7 @@
 
 <form action="itens">
 	<input type="hidden" name="pedido.id" value="${pedido.id}"/>
-
-	<button>Adiocinar item</button>
-</form>
-
-<form action="lista">
-	<button>Voltar para lista de pedidos</button>
+	<input type="hidden" name="pedido.cliente" value="${pedido.cliente}"/>
+	
+	<button>Adicionar item</button>
 </form>
