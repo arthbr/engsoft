@@ -23,13 +23,7 @@ caption {
 tr {
 	font-size: 90%;
 }
-/* prevent nested tables reducing font size further */
-/* tr tr { */
-/* 	font-size: 100%; */
-/* } */
-
 /* tinted rows */
-/* in CSS3 selectors: tbody tr:even or tbody tr:nth-child(2n) */
 tr.odd {
 	background: #DFD;
 }
