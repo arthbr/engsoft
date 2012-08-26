@@ -1,0 +1,9 @@
+Arthur Branco Costa
+#USP: 7278156
+Disciplina: MAC0332 - Engenharia de Software
+Exercício-programa #1
+Professor: Marco Aurélio Gerosa
+
+Aplicação web que faz o controle de pedidos de uma loja.
+
+Foram usados JPA/Hibernate, VRaptor e MySQL para o desenvolvimento deste. Bem como, os projetos em branco no PACA e no site do VRaptor e as apostilas da Caelum.
