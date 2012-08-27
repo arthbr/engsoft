@@ -90,26 +90,26 @@ public class PedidoController {
   }
 
   public void addItem(Long id, String descricao, int quantidade, double valor) {
-//    if (descricao == null || descricao.length() < 2) {
-//      validator.add(new ValidationMessage(
-//          "Nome é obrigatório e precisa de mais de três letras", "descricao"));
-//    } 
-//    else {
-//      if (quantidade <= 0) {
-//        validator.add(new ValidationMessage("Quantidade deve ser positiva",
-//            "quantidade"));
-//      } 
-//      else {
-//        if (valor < 0.01) {
-//          validator.add(new ValidationMessage("Valor deve ser positivo",
-//              "valor"));
-//        }
-//      }
-//    }
+    if (descricao == null || descricao.length() < 2) {
+      validator.add(new ValidationMessage(
+          "Nome é obrigatório e precisa de mais de três letras", "descricao"));
+    } 
+    else {
+      if (quantidade <= 0) {
+        validator.add(new ValidationMessage("Quantidade deve ser positiva",
+            "quantidade"));
+      } 
+      else {
+        if (valor < 0.01) {
+          validator.add(new ValidationMessage("Valor deve ser positivo",
+              "valor"));
+        }
+      }
+    }
 
     Pedido pedido = dao.carregaPedido(id);
 
-//    validator.onErrorUsePageOf(this).itens(pedido);
+    validator.onErrorUsePageOf(this).itens(pedido);
 
     dao.addItem(id, descricao, quantidade, valor);
     result.redirectTo(this).itens(pedido);
