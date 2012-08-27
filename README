@@ -4,6 +4,30 @@ Disciplina: MAC0332 - Engenharia de Software
 Exercício-programa #1
 Professor: Marco Aurélio Gerosa
 
-Aplicação web que faz o controle de pedidos de uma loja.
 
-Foram usados JPA/Hibernate, VRaptor e MySQL para o desenvolvimento deste. Bem como, os projetos em branco no PACA e no site do VRaptor e as apostilas da Caelum.
+> Objetivo:
+Desenvolver uma aplicação web que faz o controle de pedidos de uma loja.
+
+> O que foi utilizado:
+Foram usados JPA/Hibernate, VRaptor e MySQL para o desenvolvimento deste.
+Bem como, os projetos em branco no PACA e no site do VRaptor e as apostilas da Caelum.
+
+
+> O que faltou:
+Itens que eu queria ter utilizado/feito:
+- BigDecimal, porque houve uns erros nas últimas casas decimais quando as contas ficavam muito grandes;
+- Calendar, acabei usando uma String convencial mesmo e o usuário tendo que digitar a data; 
+- Validação dos itens, só consegui validar o cliente e a data, não entendi porque com os itens não é igual;
+- Edição de itens ou pedidos;
+- Remoção de itens;
+- Javascript quando um item fosse enviado, para aparecer uma nova fila de item a ser preenchido.
+
+Todos esses itens eu tentei rapidamente fazer e não deu certo de cara... depois fui enrolando e fiquei sem tempo de voltar atrás para tentar realizá-los... mas isso é algo que eu gostaria muito de saber.
+
+> Comentários desnecessários:
+Acho que aprendi bastante de CSS e HTML, apesar de não ser o foco do trabalho.
+Os testes do JUnit foram bastante tranquilos, mas acho que se fosse testar mais coisas e usar o mock, ficaria bem complicado.
+Deu pra entender um pouco de Hibernate e VRaptor e aplicar no MySQL conhecimentos vistos em BD.
+Aprendi a usar o git no terminal.
+
+Enfim, aprendi temas variáveis, a maioria muito superficialmente, mas foi um projeto interessante, que eu gostei de ter feito.
