@@ -17,6 +17,8 @@
 package br.edu.usp.ime.controller;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import br.com.caelum.vraptor.validator.ValidationMessage;
 
@@ -24,7 +26,6 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
-import br.com.caelum.vraptor.validator.Message;
 import br.edu.usp.ime.dao.PedidoDAO;
 import br.edu.usp.ime.modelo.Pedido;
 
@@ -34,6 +35,8 @@ public class PedidoController {
   private final PedidoDAO dao;
   private final Result result;
   private final Validator validator;
+  private static final Pattern DATA = Pattern
+      .compile("^(([0-2][0-9])|(3[01]))/((0[1-9])|(1[012]))/[12][0-9]{3}$");
 
   public PedidoController(PedidoDAO dao, Result result, Validator validator) {
     this.dao = dao;
@@ -64,7 +67,16 @@ public class PedidoController {
       validator
           .add(new ValidationMessage(
               "o nome do cliente é obrigatório e precisa de no mínimo três letras.",
-              "Erro"));
+              "Erro (nome)"));
+    } 
+    else {
+      if (pedido.getData() != null) {
+        Matcher m = DATA.matcher(pedido.getData());
+        if (!m.matches()) {
+          validator.add(new ValidationMessage("a data está no formato errado.",
+              "Erro (data)"));
+        }
+      }
     }
 
     validator.onErrorUsePageOf(this).cadastro();
@@ -81,7 +93,7 @@ public class PedidoController {
 //    if (descricao == null || descricao.length() < 2) {
 //      validator.add(new ValidationMessage(
 //          "Nome é obrigatório e precisa de mais de três letras", "descricao"));
-//    }
+//    } 
 //    else {
 //      if (quantidade <= 0) {
 //        validator.add(new ValidationMessage("Quantidade deve ser positiva",

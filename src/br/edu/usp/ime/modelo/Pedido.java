@@ -1,6 +1,7 @@
 package br.edu.usp.ime.modelo;
 
 import java.util.ArrayList;
+//import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -22,7 +23,8 @@ public class Pedido {
   @NotNull
   private String cliente;
   
-  private int data;
+  private String data;
+//  private Calendar data = Calendar.getInstance();
   
   @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
   private List<Item> itens = new ArrayList<Item>();
@@ -89,9 +91,13 @@ public class Pedido {
     return cliente;
   }
 
-  public int getData() {
+  public String getData() {
     return data;
   }
+  
+//  public Calendar getData() {
+//    return data;
+//  }
   
   public int getQuantidadeItens() {
     return quantidadeItens;
@@ -105,9 +111,13 @@ public class Pedido {
     this.cliente = cliente;
   }
 
-  public void setData(int data) {
+  public void setData(String data) {
     this.data = data;
   }
+  
+//  public void setData(Calendar data) {
+//    this.data = data;
+//  }
   
   public void setItens(List<Item> itens) {
     this.itens = itens;
